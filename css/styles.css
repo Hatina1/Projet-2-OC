@@ -2,6 +2,10 @@
 
 * { margin:0; padding:0; box-sizing:border-box; }
 
+:root{
+  --main-bg-color: rgb(240, 241, 242);
+}
+
 /********* Body ******** */
 
 body {
@@ -21,7 +25,6 @@ header {
   /*background-color: yellow;*/
   margin:0 0 0 50px;
   height:60px;
-  padding-left: 10px;
 }
 
 .container_logo {
@@ -29,7 +32,8 @@ header {
   background-size:contain;
   background-repeat: no-repeat;
   /*border: 1px solid black;*/
-  height:40px;
+  height: 50px;
+  margin:40px 0 0 0;
   align-self: center;
   flex:0 0 76%;
 }
@@ -66,6 +70,10 @@ header ul{
   /*border: 1px solid black;*/
 }
 
+.menu_item a:hover {
+  color: hsl(220, 90%, 56%);
+}
+
 .menu_item:hover {
   list-style-type: none;
   color: hsl(220, 90%, 56%);
@@ -73,9 +81,7 @@ header ul{
   border-top: 3px solid currentcolor;
 }
 
-.menu_item a:hover {
-  color: hsl(220, 90%, 56%);
-}
+
 
 @media only screen and (max-width: 992px) {
   .container_logo {
@@ -134,8 +140,7 @@ header ul{
 
 .section-recherche {
   height: 100px;
-  margin:0 30px;
-  padding-left: 10px;
+  margin:30px 30px 0 30px;
   /*background-color: greenyellow;*/
 }
 
@@ -167,7 +172,7 @@ header ul{
   line-height: 45px;
   vertical-align: middle;
   /*padding: 12px; */
-  background-color: rgba(250, 250, 250, 0.5);
+  background-color: rgb(248, 249, 250);
   border-radius: 12px 0 0 12px;
   font-size: 18px;
 }
@@ -178,7 +183,7 @@ header ul{
   width: 56%;
    /*padding: 12px;*/
   background-color: #fff ;
-  border: 1px solid rgba(250, 250, 250, 0.5);
+  border: 2px solid rgba(240, 240, 240, 0.5);
 }
 
 input::placeholder {
@@ -217,7 +222,7 @@ input::placeholder {
 
 .section-filtre {
   margin: 20px 25px 30px 30px; 
-  padding-left: 20px;
+  
   /*background-color: greenyellow;*/
 }
 
@@ -296,18 +301,23 @@ input::placeholder {
 
 
 
+
+
+
+
+
 /********* Card Hebergements******** */
 .card-heb {
   position: relative;
-  width: 180px;
-  height: 144px;
-  border:3px solid white;
-  margin:10px 30px; /* a changer en pourcentage */
-   /* padding-left: 10px; a changer en pourcentage */
+  width: 215px;
+  height: 172px;
+  border:4px solid white;
+  margin:15px;
+   /* padding-left: 10px;*/
   background-color:white;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  border-radius: 10px; 
+  border-radius: 15px; 
 }
 
 .card-heb:hover {
@@ -317,7 +327,7 @@ input::placeholder {
 .card-heb img {
   position: absolute;
   background-color: yellow;
-  border-radius: 10px 10px 0 0;
+  border-radius: 12px 12px 0 0;
   top: 0;
   width: 100%;
   height: 60%;
@@ -332,9 +342,23 @@ input::placeholder {
   top:60%;
   width: 100%;
   height: 40%;
-  font-size: 10px; 
+  font-size: 12px; 
   line-height: 1.5;
+}
+
+.card-desc-title  {
+  font-size: 14px; 
+}
+.card-desc-title, .card-desc span{
   font-weight: bold;
+}
+.star--blue  {
+  font-size: 10px; 
+  color:hsl(220, 90%, 56%);
+}
+.star--grey  {
+  font-size: 10px; 
+  color:rgb(220, 220, 220);
 }
 
 /********* Card populaires
@@ -345,15 +369,15 @@ input::placeholder {
 ******** */
 .card-pop {
   position: relative;
-  width: 250px;
-  height: 100px;
-  border:3px solid white;
-  margin:10px 30px; /* a changer en pourcentage */
+  width: 300px;
+  height: 120px;
+  border:4px solid white;
+  margin:15px; /* a changer en pourcentage */
    /* padding-left: 10px; a changer en pourcentage */
   background-color:white;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .card-pop:hover {
@@ -363,7 +387,7 @@ input::placeholder {
 .card-pop img {
   position: absolute;
   background-color: yellow;
-  border-radius: 10px 0 0 10px;
+  border-radius: 12px 0 0 12px;
   top: 0;
   width: 40%;
   height: 100%;
@@ -378,9 +402,8 @@ input::placeholder {
   left:40%;
   width: 60%;
   height: 100%;
-  font-size: 10px; 
+  font-size: 12px; 
   line-height: 1.5;
-  font-weight: bold;
 }
 
 
@@ -395,8 +418,8 @@ input::placeholder {
   display:flex;
   flex-flow: row nowrap;
   gap:3%;
-  background-color: yellow;
-  margin:10px 30px; /* a changer en pourcentage */
+  /*background-color: yellow;*/
+  margin:10px 20px;
 }
 
 .container-heb, .container-pop{
@@ -405,30 +428,54 @@ input::placeholder {
  /* background-color: rgba(250, 250, 250, 0.5);*/
   border-radius: 10px;
   background-color: rgb(233, 112, 213);
+  background-color: var(--main-bg-color);
 }
 
 /* gap 3%, heb 66% pop 31% */
 .container-heb {
-  width:66%;
+  width:65%;
 }
 .container-pop {
-  width:31%;
+  width:32%;
 }
 
-.container-heb-title, .container-pop-title{
+.container-heb-title, .container-pop-title {
   display:flex;
   flex-flow: row wrap;
+  justify-content: space-between;
  /* background-color: rgba(250, 250, 250, 0.5);*/
   border-radius: 10px 10px 0 0;
-  background-color: rgb(112, 179, 233);
+  background-color: var(--main-bg-color);
+  padding: 20px 30px 10px 30px;
+  font-size: 16px;
+}
+
+.container-pop-title i{
+  line-height: 1.8;
+  font-size: 20px;
 }
 
 .container-heb-body, .container-pop-body{
   display:flex;
   flex-flow: row wrap;
  /* background-color: rgba(250, 250, 250, 0.5);*/
-  background-color: rgb(112, 179, 233);
+  background-color: var(--main-bg-color);
+  margin: 0 15px;
 }
+
+.container-heb-plus {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border-radius: 0 0 10px 10px;
+  background-color: var(--main-bg-color);
+  padding: 15px 0 30px 30px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+
 
 
 
@@ -439,22 +486,33 @@ input::placeholder {
 /****************** Card Activités ****************/
 .card-act {
   position: relative;
-  width: 180px;
-  height: 144px;
+  width: 260px;
+  height: 420px;
   /* width: 100%;
-  height: 48%;*/
-  border:3px solid white;
-  margin:10px 30px; /* a changer en pourcentage */
-   /* padding-left: 10px; a changer en pourcentage */
-  background-color:white;
+  height: 48%; */
+  border-radius: 15px;
+  margin:15px; /*a changer en pourcentage */
+   /* padding-left: 10px; border:1px solid white; 
+     a changer en pourcentage */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  border-radius: 10px; 
+ 
 }
 
-.card-act:nth-child(3n +1) {
-  height: 288px;
+.card-act:nth-child(2) {
+  height: 222px;
 }
+.card-act:nth-child(3) {
+  height: 155px;
+}
+.card-act:nth-child(5) {
+  height: 185px;
+}
+.card-act:nth-child(6) {
+  height: 197px;
+}
+
+
 
 .card-act:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -463,22 +521,22 @@ input::placeholder {
 .card-act img {
   position: absolute;
   background-color: yellow;
-  border-radius: 10px 10px 0 0;
+  border-radius: 15px 15px 0 0;
   top: 0;
   width: 100%;
-  height: 60%;
+  height: 87%;
   object-fit: cover;  /*test cover, contain fit and scale-down*/
 }
 
 .card-act .card-desc {
   position: absolute;
   background-color: white;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 15px 15px;
   padding: 3% 5% 2% 5% ;
-  top:60%;
+  bottom:0%;
   width: 100%;
-  height: 40%;
-  font-size: 10px; 
+  height: 55px;
+  font-size: 14px; 
   line-height: 1.5;
   font-weight: bold;
 }
@@ -487,26 +545,28 @@ input::placeholder {
 .container-act {
   display:flex;
   flex-flow: column nowrap;
-  margin:10px 30px;
- /* background-color: rgba(250, 250, 250, 0.5);*/
+  margin:15px;
+ /* background-color: rgba(250, 250, 250, 0.5); width:100%;*/
+  height: 470px;
   border-radius: 10px;
-  background-color: rgb(233, 112, 213);
-  width:100%;
-  height: 330px;
+  
   
 }
 
 .container-act-title {
   border-radius: 10px 10px 0 0;
-  background-color: rgb(112, 179, 233);
+ /* background-color: rgb(220, 220, 220); */
+  padding: 20px 30px 10px 20px;
+  font-size: 16px;
 }
 
 .container-act-body{
   display:flex;
   flex-flow: column wrap;
-  height: 100%;
- /* background-color: rgba(250, 250, 250, 0.5);*/
-  background-color: rgb(112, 179, 233);
+ /* background-color: rgba(250, 250, 250, 0.5);
+   */
+   height: 100%;
+ /* background-color: rgb(112, 179, 233);*/
 }
 
 
@@ -520,19 +580,23 @@ input::placeholder {
 
 /**************************** Footer**********************************/
 footer{
+  width: 100%;
   display: flex; 
   flex-flow:row wrap; 
+  gap: 20px 150px;
+  align-items: center;
   /*background-color: rgba(250, 250, 250, 0.5);*/
-  background-color:lightpink;
-  justify-content: center;
-  margin: 10px 30px;
+  background-color:var(--main-bg-color);
+  margin: 20px 0;
+  height: 180px;
 }
 
 footer div{
   margin: 0 50px;
+ 
 }
 
-.footer_item {
+.footer_item,.footer_item a {
   list-style-type: none;
   text-decoration: none;
   color: grey;
