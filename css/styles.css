@@ -110,20 +110,20 @@ header ul{
     flex-flow:row wrap;
     align-items:center;
     justify-content: center;
-    border: 1px solid red;
+
   }
 
   .container_logo {
     margin:0;
     background-position: center;
     flex:0 0 100%;
-    border: 1px solid grey;
+ 
   }
 
   header ul{
     flex:0 0 100%;
     display: flex; 
-    border: 1px solid grey;
+
   }
   
   .menu_item{
@@ -131,7 +131,6 @@ header ul{
     color: grey;
     border-bottom: 3px solid currentcolor;
     flex:0 0 50%;
-    border: 1px solid grey;
     padding:30px 20px 0 20px;
     line-height: 40px;
   }
@@ -231,7 +230,7 @@ input::placeholder {
   .section-recherche {
     height: 200px;
     margin:60px 20px 0 20px;
-    border: 1px solid grey;
+   
   }
   .section-recherche h3 {
     color: var(--title-color);
@@ -383,19 +382,18 @@ input::placeholder {
 @media only screen and (max-width: 768px) {
   .section-filtre {
   margin: 20px; 
-   border: 1px solid grey;
+
   }
 
   .section-filtre ul {
     
     width: 100%;
     gap: 15px 10px;
-    border: 1px solid grey;
   }
 
   .section-filtre li {
     margin: 0; 
-    border: 1px solid grey;
+
   
   }
   .filtre-item {
@@ -489,7 +487,6 @@ input::placeholder {
     display:flex;
     flex-flow: row wrap;
     margin:0;
-    border: 1px solid red;
   }
   .container-heb {
     width:100%;
@@ -786,7 +783,7 @@ input::placeholder {
     flex-flow: row wrap;
     height: auto;
     margin:0;
-    border: 1px solid grey;
+    
   }  
   .container-act-title {
     padding: 40px 20px 10px 20px;
