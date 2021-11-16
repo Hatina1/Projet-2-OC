@@ -18,8 +18,8 @@
             </div>
             
             <ul>
-                <li class="menu_item"><a href="#">Hébergements</a></li>
-                <li class="menu_item"><a href="#">Activités</a></li>
+                <li class="menu_item" id="current--blue"><a href="#Heb">Hébergements</a></li>
+                <li class="menu_item"><a href="#Act">Activités</a></li>
              </ul>
         </header>
 
@@ -30,12 +30,16 @@
             <div class="barre-rech">
                 <div class="icon-map"><i class="fa fa-map-marker-alt"></i></div>
                 <input class="city-rech" type="text" id="city" name="city" placeholder="Marseille, France">
-                <button class="button-text" type="button"> 
+                <button class="button-rech" type="button"> 
+                    <span class="button-text">Rechercher</span>
+                    <i class="fa fa-search button-icone"></i>
+                </button>
+                <!--<button class="button-text" type="button"> 
                     Rechercher
                 </button>
                 <button class="button-icone" type="button"> 
                     <i class="fa fa-search"></i>
-                </button>
+                </button> -->
             </div>
         </section>         
         
@@ -44,7 +48,7 @@
         <section class="section-filtre">
             <ul>
                 <li class="filtres"><p class="filtres-title">Filtres</p></li>
-                <li class="filtres"><i class="fa fa-money-bill-wave icone-filtre-backg"></i><p class="filtre-item">Economique</p></li>
+                <li class="filtres"><i class="fa fa-money-bill-wave icone-filtre-backg"></i><p class="filtre-item">Économique</p></li>
                 <li class="filtres"><i class="fa fa-child icone-filtre-backg"></i><p class="filtre-item">Familial</p></li>
                 <li class="filtres"><i class="fa fa-heart icone-filtre-backg"></i><p class="filtre-item">Romantique</p></li>
                 <li class="filtres"><i class="fa fa-dog icone-filtre-backg"></i><p class="filtre-item">Animaux autorisés</span></li>
@@ -62,7 +66,7 @@
             <div class="container-heb">
                 <!-------- Container Hebergements Title -------->
                 <div class="container-heb-title">
-                    <h3>Hébergements à Marseille</h3> 
+                    <h3 id="Heb">Hébergements à Marseille</h3>  
                 </div>
                 <!-------- Container Hebergements Body -------->
                 <div class="container-heb-body">
@@ -240,7 +244,7 @@
         <div class="container-act">
             <!-------- Cards Activités Title -------->
             <div class="container-act-title">
-                <h3>Activités à Marseille</h3> 
+                <h3 id="Act">Activités à Marseille</h3> 
             </div>
             <!-------- Cards Activités Body -------->
             <div class="container-act-body">
@@ -266,7 +270,7 @@
                         <img src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Iles_Frioul">
                     </div>
                     <div class="card-desc">
-                        <p class="card-desc-title">Iles de Frioul</p>
+                        <p>Iles de Frioul</p>
                     </div>
                 </div>
                 <div class="card-act">
@@ -274,7 +278,7 @@
                         <img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Parc_Calanques">
                     </div>
                     <div class="card-desc">
-                        <p class="card-desc-title">Parc National des Calanques</p>
+                        <p>Parc National des Calanques</p>
                     </div>
                 </div>
                 <div class="card-act">
@@ -282,7 +286,7 @@
                         <img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Notre_Dame_Garde">
                     </div>
                     <div class="card-desc">
-                        <p class="card-desc-title">Notre-Dame-de-la-Garde</p>
+                        <p>Notre-Dame-de-la-Garde</p>
                     </div>
                 </div>
                 <div class="card-act">
@@ -290,7 +294,7 @@
                         <img src="images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc_Longchamp">
                     </div>
                     <div class="card-desc">
-                        <p class="card-desc-title">Parc Longchamp</p> 
+                        <p>Parc Longchamp</p> 
                     </div>
                 </div>
             </div> 
