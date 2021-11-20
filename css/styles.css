@@ -43,6 +43,8 @@ header {
 
 .container_logo img {
   display: none;
+  /*ça optimise automatiquement le chargement de votre page (les images ne seront pas chargées au moment de l’affichage du code HTML, mais uniquement après que le CSS soit totalement chargé, donc en toute fin du chargement).
+Il reste un dernier détail pour ceux pour qui ces images ont une importance au niveau du référencement naturel.*/
 }
 
 header ul{
@@ -71,8 +73,7 @@ header ul{
   background-color: white;
   text-align: center;
   color: grey;
-  border-top: 3px solid white;
-  /*border: 1px solid grey;*/
+  border-top: 3px solid white; /*to assure that Activités and hebergements have the same baseline*/
 }
 
  
