@@ -754,10 +754,13 @@ input::placeholder {
 .star--blue  {
   font-size: 12px; 
   color:hsl(220, 90%, 56%);
+  letter-spacing: -3px;
 }
+
 .star--grey  {
   font-size: 12px; 
   color:rgb(220, 220, 220);
+  letter-spacing: -3px;
 }
 
 /********* Card populaires ******** */
@@ -826,6 +829,7 @@ input::placeholder {
     height: 150px;
     margin:6px 20px 6px 20px ;
     border:5px solid white;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 8%);
   }
 
   .card-heb {
@@ -833,27 +837,25 @@ input::placeholder {
     height: 200px;
     margin:6px 20px 6px 20px ;
     border:5px solid white;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 8%);
   }
 
   .card-pop .card-desc {
     font-size: 14px; 
-    line-height: 1.2;
-  }
-
-  .card-heb .card-desc {
-    font-size: 16px; 
+    line-height: 1.4;
   }
 
   .card-desc-title  {
+    padding-top: 3px;
     font-size: 16px; 
   }
   .card-pop .card-desc div {
-    line-height: 5;
+    line-height: 4;
   }
 
   .card-heb .card-desc {
     font-size: 14px; 
-    line-height: 1.3;
+    line-height: 1.5;
   }
 
   .star--blue , .star--grey {
@@ -956,11 +958,13 @@ input::placeholder {
     height: 205px;
     border-radius: 20px;
     margin: 12px 15px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 8%);
+
   }
   .card-act img {
     position: absolute;
     background-color: yellow;
-    border-radius: 18px 18px 0 0;
+    border-radius: 22px;
     top: 0;
     width: 100%;
     height: 100%;
@@ -1063,9 +1067,9 @@ footer{
   display: flex; 
   flex-flow:row wrap; 
   background-color:var(--main-bg-color);
-  margin: 20px 0;
+  margin-top: 20px;
   padding: 40px 0;
-  height: 180px;
+  height: 200px;
   /*border: 1px solid grey;*/
 }
 
@@ -1110,7 +1114,7 @@ footer h3 {
 
 @media only screen and (max-width: 767px) {
   footer{ 
-    height: 540px;
+    height: 480px;
     flex-flow:column wrap; 
     align-items: flex-start;
     padding: 0 0 40px 0;
