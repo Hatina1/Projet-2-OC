@@ -3,22 +3,21 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 
 :root{
-  --main-bg-color: rgb(240, 241, 242);
+  --main-bg-color: #F2F2F2;
   --title-color:rgb(60, 60, 60);
   --text-info-color:rgb(90,90,90);
+  --blue-color:#0065FC;
 }
 
 /********* Body ******** 
 margin: 0 10px 0 30px; */
 
 body {
-    background-color: rgba(250, 250, 250, 0.5);
     background-color: white;
     color:rgb(60, 60, 60);
     font-family: 'Raleway', sans-serif;
     font-size: 16px; 
     line-height: 1.5;
-    
 }
 
 /* ********Header : logo et menu ******** */
@@ -78,30 +77,49 @@ header ul{
 
  
 .menu_item a:hover {
-  color: hsl(220, 90%, 56%);
+  color: var(--blue-color) ;
 }
 
 .menu_item:hover {
   list-style-type: none;
-  color: hsl(220, 90%, 56%);
+  color: var(--blue-color);
   text-decoration: none;
   border-top: 3px solid currentcolor;
 }
 
 #current--blue {
-  border-top: 3px solid hsl(220, 90%, 56%);
+  border-top: 3px solid var(--blue-color);
 }
 #current--blue a{
-  color: hsl(220, 90%, 56%);
+  color: var(--blue-color);
 }
 
 /*
 test
 */
 
-
-
 @media only screen and (max-width: 1024px) {
+
+  body {
+    margin: 0;
+  }
+
+  header {
+    width: auto; 
+    height: auto;
+    margin: 0 20px 0 50px;
+  }
+
+  .container_logo {
+    flex:0 0 60%;
+  }
+
+  header ul {
+    flex:0 0 40%;
+  }
+} 
+
+@media only screen and (max-width: 991px) {
 
   body {
     margin: 0;
@@ -157,7 +175,7 @@ test
   .menu_item{
     text-align: center;
     color: grey;
-    border-bottom: 3px solid currentcolor;
+    border-bottom: 3px solid #F2F2F2;
     flex:0 0 50%;
     padding:30px 20px 0 20px;
     line-height: 40px;
@@ -166,7 +184,7 @@ test
   
   .menu_item:hover {
     border-top: 0; /* in order to remove the desktop version top border */
-    border-bottom: 3px solid hsl(220, 90%, 56%);;
+    border-bottom: 3px solid var(--blue-color);
   }
 
   #current--blue {
@@ -212,24 +230,33 @@ test
   
 }
 
-.icon-map {
-  position: relative;
+/* position: relative;
   z-index:2;
-  height: 50px;
-  width: 13%;
   float: left;
+  vertical-align: middle;*/
+.icon-map {
+  height: 50px;
+  width: 52px;
   text-align:center;
   line-height: 50px;
-  vertical-align: middle;
   background-color: var(--main-bg-color);
   border-radius: 15px 0 0 15px;
   font-size: 18px;
 }
 
+form {
+  display: inline-block;
+  margin-right: -0.3em;
+  width: 220px;
+  left: 52px;
+  bottom: 50px;
+  position: relative;
+}
+
 .city-rech {
   position: relative;
   height: 50px;
-  width: 55%;
+  width: 100%;
   background-color: #fff ;
   border: 2px solid rgba(240, 240, 240, 0.5);
 }
@@ -243,18 +270,20 @@ input::placeholder {
 
 .button-rech {
   position: relative;
+  margin-bottom: 2px;
   height: 50px;
-  width: 32%; 
-  float:right;
+  width: 128px; 
   color:white;
   font-weight: 600;
-  background-color:hsl(220, 90%, 54%);
-  border: 1px solid hsl(220, 90%, 54%);
+  background-color:var(--blue-color);
+  border: 1px solid var(--blue-color);
   vertical-align: middle;
   line-height: 50px;
   text-align: center;
   border-radius: 0 15px 15px 0;
   font-size: 17px;
+  bottom: 50px;
+  left: 52px;
 }
 
 .button-icone {
@@ -288,15 +317,17 @@ input::placeholder {
   }
   .icon-map {
     position: relative;
-    float:left;
     height: 50px;
     width: 56px;
     line-height: 50px;
   }
+  form {
+    width: 240px;
+  }
   .city-rech {
     position: relative;
     height: 50px;
-    width: 210px;
+    width: 100%;
   }
 
   input::placeholder {
@@ -306,12 +337,11 @@ input::placeholder {
 
   .button-rech{
     position: relative;
-    float:right;
     margin-left: -20px;
     height: 50px;
     width: 56px; 
     line-height: 50px;
-    border-radius: 12px 12px;
+    border-radius: 18px 18px;
     font-size: 15px;
   }
   
@@ -331,20 +361,20 @@ input::placeholder {
     padding-left: 3% ;
   }
 
-  .icon-map {
-    height: 50px;
-    width: 50px;
-    line-height: 50px;
+ 
+  form {
+    width: 180px;
   }
+  
   .city-rech {
     position: relative;
     height: 50px;
-    width: 160px;
+    width: 100%;
   }
 
   input::placeholder {
     padding-left: 10px;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .button-rech{
@@ -396,8 +426,8 @@ input::placeholder {
 
 .icone-filtre-backg{
   margin-right: -44px;
-  background-color:hsl(218, 100%, 93%);
-  color:hsl(220, 90%, 56%);
+  background-color:#DEEBFF;
+  color:var(--blue-color);
   z-index:1;
   border-radius: 50%;
   align-self:center;
@@ -423,6 +453,10 @@ input::placeholder {
   
 }
 
+.filtre-item:hover {
+  background-color: #DEEBFF;
+}
+
 .info-nb {
   margin: 30px 30px 30px 40px; 
   padding-left: 10px; 
@@ -433,7 +467,7 @@ input::placeholder {
 .icone-info {
   background-color: #fff;
   border: 1px solid rgb(220, 220, 220);
-  color:hsl(220, 90%, 56%);
+  color:var(--blue-color);
   border-radius: 50%;
   width: 20px;
   height: 20px; 
@@ -661,6 +695,51 @@ input::placeholder {
 
 }
 
+@media only screen and (max-width: 991px) {
+  .main{
+    display:flex;
+    flex-flow: row wrap;
+    margin-left:30px;
+  }
+  .container-heb {
+    width:100%;
+    margin:0;
+    order:1; 
+  }
+  .container-heb, .container-heb-title, .container-heb-body, .container-heb-plus  {
+    background-color: #fff;
+  }
+
+ .container-heb-plus  {
+    background-color: #fff;
+    font-size: 20px;
+    padding: 0 0 30px 30px;
+    
+  }
+
+  .container-pop {
+    width:100%;
+    margin:0;
+    order:0;
+  }
+  .container-pop, .container-pop-title, .container-pop-body  {
+    border-radius: 0;
+  }
+  .container-pop-title, .container-heb-title {
+    padding: 40px 20px 10px 20px;
+    font-size: 20px;
+  }
+  .container-pop-title i{
+    line-height: 1.8;
+    font-size: 22px;
+  }
+  .container-heb-body, .container-pop-body{
+    margin: 0 0 30px 0;
+    
+  }
+
+}
+
 @media only screen and (max-width: 767px) {
   .main{
     display:flex;
@@ -719,6 +798,13 @@ input::placeholder {
   border-radius: 15px; 
 }
 
+div a {
+  display:block;
+  width:100%;
+  height:100%;
+  color:rgb(60, 60, 60);
+} 
+
 .card-heb:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
@@ -753,7 +839,7 @@ input::placeholder {
 }
 .star--blue  {
   font-size: 12px; 
-  color:hsl(220, 90%, 56%);
+  color:var(--blue-color);
   letter-spacing: -3px;
 }
 
@@ -802,6 +888,28 @@ input::placeholder {
 }
 
 @media only screen and (max-width: 1024px) {
+
+  .card-heb {
+    width: 200px;
+    height: 160px;
+    margin:6px 15px;
+    border:4px solid white;
+  }
+
+  .card-desc-title  {
+    font-size: 14px; 
+  }
+  .card-heb .card-desc {
+    font-size: 12px; 
+  }
+
+  .card-pop {
+    width: 300px;
+  }
+
+}
+
+@media only screen and (max-width: 991px) {
 
   .card-heb {
     width: 200px;
@@ -952,6 +1060,36 @@ input::placeholder {
   }  
 }
 
+@media only screen and (max-width: 991px) {
+  .card-act {
+    width: 200px;
+    height: 160px;
+    margin: 6px 15px;
+    border:4px solid white;
+  }
+  .card-act img {
+    position: absolute;
+    border-radius: 12px 12px 0 0;
+    top: 0;
+    width: 100%;
+    height: 75%;
+    object-fit: cover;  
+  }
+  .card-act .card-desc {
+    border-radius: 0 0 5px 5px;
+    padding: 20px;
+    bottom:0%;
+    width: 100%;
+    height: 25%;
+    font-size: 14px; 
+    padding: 12px 5px;
+  }
+
+  .card-act:nth-child(2),.card-act:nth-child(3), .card-act:nth-child(5), .card-act:nth-child(6) {
+    height: 160px;
+  }  
+}
+
 @media only screen and (max-width: 767px) {
   .card-act {
     width: 100%;
@@ -1011,6 +1149,28 @@ input::placeholder {
 }
 
 @media only screen and (max-width: 1024px) {
+  .container-act{
+    display:flex;
+    flex-flow: row wrap;
+    height: auto;
+    margin:0 0 0 30px;
+    
+  }  
+  .container-act-title {
+    padding: 40px 20px 10px 20px;
+    font-size: 20px;
+    /*border: 1px solid grey;*/
+  }
+
+  .container-act-body{
+    display:flex;
+    flex-flow: row wrap;
+    /*border: 1px solid grey;*/
+    width:100%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
   .container-act{
     display:flex;
     flex-flow: row wrap;
@@ -1112,6 +1272,28 @@ footer h3 {
   }
 }
 
+
+@media only screen and (max-width: 991px) {
+  
+  footer{
+    margin: 0;
+    padding: 40px 0 40px 20px;
+    /*border: 1px solid grey;*/
+  }
+
+  footer div{
+    margin: 0 60px 0 20px;
+  }
+
+  footer h3 {
+    font-size: 14px;
+  }
+  
+  .footer_item,.footer_item a {
+    font-size: 14px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   footer{ 
     height: 480px;
@@ -1136,4 +1318,12 @@ footer h3 {
     font-size: 16px;
     padding-top: 10px;
   }
+}
+
+@media only screen and (max-width: 425px) {
+  footer{ 
+    height: 550px;
+    flex-flow:column nowrap; 
+  } 
+
 }
